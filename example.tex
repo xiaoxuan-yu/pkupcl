@@ -1,4 +1,10 @@
 \documentclass{pkupcl}
+
+% bibliography
+\addbibresource{物理化学实验.bib}
+\nocite{textbook} % 教材的引用
+
+% metadata
 \title{某物理量的测定}
 \author{张三}
 \id{1800000000}
@@ -8,6 +14,8 @@
 \pressure{100.0}
 \abstract{本实验测定了某物理量。}
 \keyword{甲\quad 乙\quad 丙\quad 丁}
+
+% 文档
 \begin{document}
 \makecover
 \section{引言}
@@ -50,7 +58,7 @@
 
 \subsection{主要结果 2 及其讨论}
 
-图片如图 1 所示。
+图片如图 1 所示\cite{web}。
 
 \begin{figure}[!ht]
 \begin{center}
@@ -68,11 +76,7 @@
 \end{equation}
 \section{实验结论}
 
-\section*{参考文献}
-
-\begin{enumerate}[label={[\arabic*]}]
-	\item 北京大学化学学院物理化学实验教研组，物理化学实验(第4版)，北京大学出版社，2002.
-	\item 松鼠，Chem \& Coding | 用LaTeX完成物化实验报告（2） 封面的制作，知乎，2017.
-\end{enumerate}
+% 输出参考文献
+\printbibliography[title=参考文献]
 
 \end{document}

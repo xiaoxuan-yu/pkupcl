@@ -22,7 +22,8 @@
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{enumitem}
 \RequirePackage{float}
-\RequirePackage[backend=biber, style=gb7714-2015]{biblatex}
+\RequirePackage[backend=biber, style=chem-acs]{biblatex}
+\renewcommand*{\bibfont}{\small}
 \RequirePackage{longtable}
 \RequirePackage[toc,page]{appendix}
 \RequirePackage{subfigure}
