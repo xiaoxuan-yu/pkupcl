@@ -8,6 +8,8 @@
 
 使用方法详见 `example.tex`。
 
+参考文献需要生成 bib 格式的文献库以供模板使用, 推荐使用 Zotero/Jabref/EndNote 等文献管理软件生成。
+
 维护者感谢以下开源项目：
 - [tansongchen/pkupcl](https://github.com/tansongchen/pkupcl)
 - [思源黑体](https://github.com/adobe-fonts/source-han-sans)
