@@ -1,10 +1,15 @@
 \ProvidesClass{pkupcl}
-
+\LoadClass[zihao=-4, fontset=none]{ctexart}
+% Math font setting
+\RequirePackage{unicode-math}
+\RequirePackage{amsmath}
+\RequirePackage{mathrsfs, bm}
+\setmathfont{XITS Math}
 % 加粗图注、表注的序号
-\LoadClass[zihao=-4]{ctexart}
 \ctexset{
 	figurename=\textbf{图},
-	tablename=\textbf{表}
+	tablename=\textbf{表},
+	fontset=sourcesans
 }
 
 % 宏包
@@ -14,6 +19,15 @@
 \RequirePackage{titlesec}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{enumitem}
+\RequirePackage{float}
+\RequirePackage[backend=biber, style=gb7714-2015]{biblatex}
+\RequirePackage{longtable}
+\RequirePackage[toc,page]{appendix}
+\RequirePackage{subfigure}
+\RequirePackage{color, xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{threeparttable}
+
 
 % 带单位的物理量
 \RequirePackage{siunitx}
@@ -24,7 +38,7 @@
 \pagestyle{fancy}
 \lhead{\sffamily \footnotesize 物理化学实验}
 \chead{\sffamily \footnotesize \@title}
-\rhead{}
+\rhead{\sffamily \footnotesize \thepage}
 \lfoot{}
 \cfoot{}
 \rfoot{}
@@ -32,10 +46,7 @@
 % 字体
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
-\setmonofont{Monaco}
-\setCJKmainfont[AutoFakeBold=3]{SimSun}
-\setCJKsansfont[AutoFakeBold=3]{SimHei}
-\setCJKmonofont[AutoFakeBold=3]{FangSong}
+\setmonofont{Fira Code}
 
 % 各级标题样式
 \titleformat{\section}[block]{\bfseries\sffamily}{\textsf{\arabic{section}}}{1em}{}[]
@@ -67,11 +78,11 @@
 	\begin{table}[!ht]
 	\sffamily
 	\centering
-	\begin{huge}
+	\begin{Large}
 	\begin{tabular}{p{4cm} p{8cm}<{\centering}}
 		题目： & \@title \\ \cline{2-2}
 	\end{tabular}
-	\end{huge}
+	\end{Large}
 	\end{table}
 	
 	\vspace*{0.5cm}
@@ -93,8 +104,8 @@
 	
 	\rule{\textwidth}{0.3pt}
 
-	\paragraph*{摘要} \@abstract
-	\paragraph*{关键词} \@keyword
+	\paragraph*{\sffamily 摘要} \@abstract
+	\paragraph*{\sffamily 关键词} \@keyword
 
 	\newpage
 }
