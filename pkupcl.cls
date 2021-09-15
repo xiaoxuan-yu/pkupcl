@@ -1,3 +1,5 @@
+% This template is forked from tansongchen/pkupcl, modified and maintained by Youmans Yu <xiaoxuan_yu@pku.edu.cn>.
+
 \ProvidesClass{pkupcl}
 \LoadClass[zihao=-4, fontset=none]{ctexart}
 % Math font setting
@@ -27,11 +29,12 @@
 \RequirePackage{color, xcolor}
 \RequirePackage{hyperref}
 \RequirePackage{threeparttable}
-
-
-% 带单位的物理量
 \RequirePackage{siunitx}
 \sisetup{detect-family}
+\RequirePackage{caption}
+\captionsetup{labelfont=sf,textfont=bf,labelsep=period}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{2pt}
 
 % 页眉页脚
 \RequirePackage{fancyhdr}
