@@ -31,7 +31,14 @@
 \RequirePackage{hyperref}
 \RequirePackage{threeparttable}
 \RequirePackage{siunitx}
-\sisetup{detect-family}
+
+% 使用siunitx包报告不确定度时，以下设置可以使结果以\bar(X) \pm \sigma 的形式表示
+% 使用siunitx包书写单位时，以下设置可以使单位之间加\cdot点
+\sisetup{
+	detect-family,
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+	}
 \RequirePackage{caption}
 \captionsetup{labelfont=sf,textfont=bf,labelsep=period}
 \setlength{\abovecaptionskip}{2pt}
@@ -113,3 +120,14 @@
 
 	\newpage
 }
+
+% 温度 电动势 浓度和气压的快速输入
+\newcommand{\swd}[1]{\SI{#1}{\degreeCelsius}}
+\newcommand{\sdds}[1]{\SI{#1}{\volt}}
+\newcommand{\snd}[1]{\SI{#1}{\mole \per \liter}}
+\newcommand{\sqy}[1]{\SI{#1}{\kilo \pascal}}
+
+% 摄氏度、公式中文本、\varepsilon的快速输入
+\newcommand{\C}{\si{\degreeCelsius}}
+\newcommand{\tr}[1]{\textrm{#1}}
+\newcommand{\ve}{\varepsilon}
