@@ -122,12 +122,15 @@
 }
 
 % 温度 电动势 浓度和气压的快速输入
-\newcommand{\swd}[1]{\SI{#1}{\degreeCelsius}}
-\newcommand{\sdds}[1]{\SI{#1}{\volt}}
-\newcommand{\snd}[1]{\SI{#1}{\mole \per \liter}}
-\newcommand{\sqy}[1]{\SI{#1}{\kilo \pascal}}
-
+\newcommand{\temp}[1]{\SI{#1}{\degreeCelsius}}
+\newcommand{\elc}[1]{\SI{#1}{\volt}}
+\newcommand{\cct}[1]{\SI{#1}{\mole \per \liter}}
+\newcommand{\prs}[1]{\SI{#1}{\kilo \pascal}}
 % 摄氏度、公式中文本、\varepsilon的快速输入
 \newcommand{\C}{\si{\degreeCelsius}}
 \newcommand{\tr}[1]{\textrm{#1}}
-\newcommand{\ve}{\varepsilon}
+\newcommand{\ve}{\varepsiloni}
+% 微分算子定义
+\newcommand\dif{\mathop{}\!\mathrm{d}}
+
+
