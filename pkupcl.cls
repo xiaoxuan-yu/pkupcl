@@ -129,7 +129,7 @@
 % 摄氏度、公式中文本、\varepsilon的快速输入
 \newcommand{\C}{\si{\degreeCelsius}}
 \newcommand{\tr}[1]{\textrm{#1}}
-\newcommand{\ve}{\varepsiloni}
+\newcommand{\ve}{\varepsilon}
 % 微分算子定义
 \newcommand\dif{\mathop{}\!\mathrm{d}}
 
