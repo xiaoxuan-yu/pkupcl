@@ -1,7 +1,7 @@
 % This template is forked from tansongchen/pkupcl, modified and maintained by Youmans Yu <xiaoxuan_yu@pku.edu.cn>.
 
 \ProvidesClass{pkupcl}
-\LoadClass[zihao=-4, fontset=none]{ctexart}
+\LoadClass[zihao=-4, fontset=none, UTF8]{ctexart}
 % Math font setting
 \RequirePackage{unicode-math}
 \RequirePackage{amsmath}
@@ -25,12 +25,15 @@
 \RequirePackage[backend=biber, style=chem-acs]{biblatex}
 \renewcommand*{\bibfont}{\small}
 \RequirePackage{longtable}
+\RequirePackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \RequirePackage[toc,page]{appendix}
-\RequirePackage{subfigure}
+\RequirePackage{subcaption}
 \RequirePackage{color, xcolor}
 \RequirePackage{hyperref}
 \RequirePackage{threeparttable}
 \RequirePackage{siunitx}
+%\RequirePackage{physics}
 
 % 使用siunitx包报告不确定度时，以下设置可以使结果以\bar(X) \pm \sigma 的形式表示
 % 使用siunitx包书写单位时，以下设置可以使单位之间加\cdot点
@@ -60,9 +63,12 @@
 \setmonofont{Fira Code}
 
 % 各级标题样式
-\titleformat{\section}[block]{\bfseries\sffamily}{\textsf{\arabic{section}}}{1em}{}[]
-\titleformat{\subsection}[block]{\bfseries}{\textsf{\arabic{section}.\arabic{subsection}}}{1em}{}[]
-\titleformat{\subsubsection}[block]{\ttfamily}{\textsf{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}}{1em}{}[]
+\renewcommand{\thesection}{\arabic{section}}
+\titleformat{\section}[block]{\bfseries\sffamily}{\textsf{\thesection}}{1em}{}[]
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\titleformat{\subsection}[block]{\bfseries}{\textsf{\thesubsection}}{1em}{}[]
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}
+\titleformat{\subsubsection}[block]{\ttfamily}{\textsf{\thesubsubsection}}{1em}{}[]
 
 % 文档元信息
 \newcommand{\id}[1]{\def\@id{#1}}
@@ -132,5 +138,7 @@
 \newcommand{\ve}{\varepsilon}
 % 微分算子定义
 \newcommand\dif{\mathop{}\!\mathrm{d}}
+\newcommand{\ddv}[2]{\frac{\dif #1}{\dif #2}}
+\newcommand{\pdv}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
 
 
