@@ -11,6 +11,7 @@
 参考文献需要生成 bib 格式的文献库以供模板使用, 推荐使用 Zotero/Jabref/EndNote 等文献管理软件生成。
 
 文档类提供了少量的快捷指令, 用于减少报告书写时的工作量。
+
 ```LaTeX
 % 温度 电动势 浓度和气压的快速输入
 \newcommand{\temp}[1]{\SI{#1}{\degreeCelsius}}
@@ -25,9 +26,12 @@
 
 % 微分算子
 \newcommand\dif{\mathop{}\!\mathrm{d}}
+\newcommand{\ddv}[2]{\frac{\dif #1}{\dif #2}}
+\newcommand{\pdv}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
 ```
 
 维护者感谢以下开源项目：
+
 - [tansongchen/pkupcl](https://github.com/tansongchen/pkupcl)
 - [思源黑体](https://github.com/adobe-fonts/source-han-sans)
 - [思源宋体](https://github.com/adobe-fonts/source-han-serif)
